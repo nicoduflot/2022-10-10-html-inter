@@ -163,6 +163,56 @@ ducimus? Voluptas?
                 </ul>
             </aside>
         </section>
+        <section>
+            <article>
+                <header>
+                    <h2>Les pseudo classe</h2>
+                </header>
+                <main>
+                    <p>
+                        il s'agit de complément de sélecteurs css, qui permettent d'intervenir sélectionnant 
+                        sur un élément précis en série contenu dans un conteneur, soit les énièmes éléments, 
+                        le premier "enfant", le dernier, etc.
+                    </p>
+                    <p>
+                        en chaînant ces pseudo classes, il est possible de prévoir des comportement de 
+                        taille des différents éléments selon la largeur d'affichage et le nombre de ses éléments
+                    </p>
+                    <p>
+                        Ici, quand on affche 2 éléments par ligne, si le dernier est égal à un multiple de 2 
+                        plus 1, il prend 100% de la largeur<br />
+                        <code><br />
+body > main > section > article:last-child:nth-of-type(2n+1){<br />
+&nbsp;&nbsp;&nbsp;&nbsp;width: 100%;<br />
+}
+</code>
+                    </p>
+                    <p>
+                        Ici, quand on affche 3 éléments par ligne, si le dernier est égal à un multiple de 3 
+                        plus 1, il prend 100% de la largeur<br />
+                        <code><br />
+body > main > section > article:last-child:nth-of-type(3n+1){<br />
+&nbsp;&nbsp;&nbsp;&nbsp;width: 100%;<br />
+}<br />
+                        </code>
+                    </p>
+                    <p>
+                        Ici, quand on affche 3 éléments par ligne, si le dernier est égal à un multiple de 3 
+                        plus 2, il prend 66% de la largeur<br />
+                        <code><br />
+body > main > section > article:last-child:nth-of-type(3n+2){<br />
+&nbsp;&nbsp;&nbsp;&nbsp;width: 66%;<br />
+}   <br />
+                        </code>
+                    </p>
+                </main>
+                <footer>
+                    <button>
+                        Lire plus
+                    </button>
+                </footer>
+            </article>
+        </section>
     </main>
     <footer>
         <section>
