@@ -1,4 +1,4 @@
-
+@import url('./Overseer.css');
 
 /*
 dimension les plus vues en web :
@@ -13,4 +13,57 @@ vw & vh =>  viewport width & viewport height : correspond à la taille
 
 si 2em = 32 px, 1em = 16px
 
+body > nav > ul
+body > footer > section > nav > ul
+
+*/
+
+:root{
+    font-family: Arial, Helvetica, sans-serif;
+    --aside-font-fam: Arial, Helvetica, sans-serif;
+    font-size: 1.1rem;
+    --couleur-texte-generale: rgb(0, 0, 0);
+    color: var(--couleur-texte-generale);
+}
+
+*, 
+*::before, 
+*::after{
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Overseer';
+    letter-spacing: 2px;
+}
+
+q::before, q::after{
+    content: '"';
+}
+
+aside h3{
+    font-family: var(--aside-font-fam);
+    letter-spacing: unset;
+}
+
+.rouge-gras{
+    color: darkred;
+    font-weight: 900;
+}
+
+
+
+/*
+@media print {
+    :root{
+        font-family: 'Times New Roman', Times, serif;
+    }
+    
+    body > header, 
+    body > nav, 
+    body > footer,
+    article footer{
+        display: none;
+    }   
+}
 */

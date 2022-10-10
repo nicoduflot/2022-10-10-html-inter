@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,14 +9,188 @@
         Commentaire en HTML
     -->
     <link rel="stylesheet" href="./css/style.css" media="screen" />
+    <link rel="stylesheet" href="./css/print.css" media="print" />
     <!--
         on va appeler aussi le fichiers script, etc
     -->
 </head>
+
 <body>
     <header>
         <h1>Formation HTML5 - CSS3</h1>
     </header>
-    
+    <nav>
+        <ul>
+            <li><a href="./" title="HTML - CSS - introduction" target="_self">Introduction</a></li>
+            <li><a href="./article.html" title="Article" target="_self">Article</a></li>
+            <li><a href="./formulaire.html" title="Formulaire" target="_self">Formulaire</a></li>
+            <li><a href="./grid.html" title="CSS Grid" target="_self">CSS Grid</a></li>
+            <li><a href="./css.html" title="Trucs CSS" target="_self">Trucs CSS</a></li>
+            <li><a href="./bootstrap.html" title="Bootstrap" target="_self">Bootstrap</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <article>
+                <header>
+                    <h2>Problèmes courants en CSS</h2>
+                </header>
+                <main>
+                    <p>
+                        Le calcul par défaut des tailles en CSS est content-box,
+                        il est conseillé de le passer en border-box
+                    </p>
+                    <p>
+                        Les tailles calculées : si vous voulez utiliser
+                        des cadratin (em), il est
+                        plus sûr d'utiliser les cadratins racine (rem)
+                        car il sont toujouts calculés
+                        par rapport au cadratin racine du user stylesheet
+                        et non pas le cadratin calculé du conteneur
+                    </p>
+                    <h3>Les polices de caractère</h3>
+                    <p>
+                        On utilisera les propriétés @font-face pour déclarer en CSS une police
+                        de caractère dont les fichiers (eot, svg, ttf, woff, woff2) sont
+                        hébergés sur le site pour ne pas forcer l'utilsateur à télécharger et installer
+                        des fichiers.
+                    </p>
+                </main>
+                <footer>
+                    <a href="./article.html">
+                        <button>
+                            Lire plus
+                        </button>
+                    </a>
+                </footer>
+            </article>
+            <article>
+                <header>
+                    <h2>HTML - CSS sur du texte</h2>
+                </header>
+                <main>
+                    <p>
+                        Il existe quelques balises pour changer l'apparence du texte. 
+                        En <b>gras</b> (b ou bold) qui n'a pas d'incidence en SEO ou en <strong>gras</strong> (strong) 
+                        qui a un impact direct sur le SEO.
+                    </p>
+                    <p>
+                        Il en est de même pour l'italique : <i>Italique à l'affichage</i>, 
+                        <em>Italique afficher avec une emphase sémantique</em>
+                    </p>
+                    <p>
+                        On utilisera les propriétés @font-face pour déclarer en CSS une police
+                        de caractère dont les fichiers (eot, svg, ttf, woff, woff2) sont
+                        hébergés sur le site pour ne pas forcer l'utilsateur à télécharger et installer
+                        des fichiers.
+                    </p>
+                    <p>
+                        La balise font <font color="#f00" size="6" face="Times new roman">texte</font> n'est plus utilisée. 
+                        maintenant on utilise les balises de type inline comme le span <span class="rouge-gras">span associé à une classe</span>
+                    </p>
+                    <pre>
+Lorem ipsum dolor sit amet 
+consectetur adipisicing elit. <br />Modi esse tenetur maiores aperiam, 
+perspiciatis aliquid incidunt, 
+eos consequatur optio debitis, 
+sequi quam consequuntur 
+dignissimos repellendus 
+recusandae deleniti suscipit 
+ducimus? Voluptas?
+                    </pre>
+                    <p>
+                        <code>
+                            Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Voluptatum ex asperiores ratione voluptas pariatur fuga quis voluptate aliquid cupiditate repellendus qui, ipsa vitae possimus iure vero impedit laborum unde corporis.
+                        </code>
+                    </p>
+                    <p>
+                        <code>
+                            &lt;p&gt;<br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;coucou<br />
+                            &lt;/p&gt;
+                        </code>
+                    </p>
+                    <p>
+                        H<sub>2</sub>SO<sub>4</sub><sup>2-</sup>
+                    </p>
+                </main>
+                <footer>
+                    <a href="./article.html">
+                        <button>
+                            Lire plus
+                        </button>
+                    </a>
+                </footer>
+            </article>
+            <article>
+                <header>
+                    <h2>D'autres balise de contenu de texte</h2>
+                </header>
+                <main>
+                    <blockquote>
+                        <q>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic odit velit temporibus, ipsum reiciendis praesentium unde assumenda autem mollitia itaque officiis, facere perferendis modi et doloribus harum non laudantium adipisci?
+                        </q>
+                        <br />
+                        <cite>Jules César</cite>
+                    </blockquote>
+                    <h3>Différencier les feuilles de style</h3>
+                    <p>
+                        Il est possible d'associer plusieurs feuilles de style à une page html, 
+                        et de différencier les "media" (screen, print) qui les utiliseront.
+                    </p>
+                    <p>
+                        Si une page utilise 90% du CSS de base mais nécessite 10% de changement,
+                        comme l'affichage d'un article unique, il est souvent créé un feuillet CSS 
+                        qui surchargera les styles uniquement sur ce type de page
+                    </p>
+                </main>
+                <footer>
+                    <a href="./article.html">
+                        <button>
+                            Lire plus
+                        </button>
+                    </a>
+                </footer>
+            </article>
+            <aside>
+                <h3>En complément</h3>
+                <ul>
+                    <li><a href="https://www.creativebloq.com/"
+                            title="Creative bloq, site de ressources et informations web & design">Creative Bloq</a>
+                    </li>
+                </ul>
+            </aside>
+        </section>
+    </main>
+    <footer>
+        <section>
+            <h3>Site map</h3>
+            <nav>
+                <ul>
+                    <li><a href="./" title="HTML - CSS - introduction" target="_self">Introduction</a></li>
+                    <li><a href="./article.html" title="Article" target="_self">Article</a></li>
+                    <li><a href="./formulaire.html" title="Formulaire" target="_self">Formulaire</a></li>
+                    <li><a href="./grid.html" title="CSS Grid" target="_self">CSS Grid</a></li>
+                    <li><a href="./css.html" title="Trucs CSS" target="_self">Trucs CSS</a></li>
+                    <li><a href="./bootstrap.html" title="Bootstrap" target="_self">Bootstrap</a></li>
+                </ul>
+            </nav>
+        </section>
+        <section>
+            <h3>Liens institutionnels</h3>
+            <nav>
+                <ul>
+                    <li><a href="#">CGU</a></li>
+                    <li><a href="#">Qui sommes-nous ?</a></li>
+                    <li><a href="#">Le blog</a></li>
+                    <li><a href="#">Nos partenaires</a></li>
+                    <li><a href="#">Informations sur les cookies</a></li>
+                </ul>
+            </nav>
+        </section>
+    </footer>
 </body>
+
 </html>

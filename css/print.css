@@ -1,0 +1,22 @@
+:root{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+body{
+    
+    width: 19cm;
+    margin-left: auto;
+    margin-left: auto;
+    /*border: 1px solid black;*/
+}
+
+body > header, 
+body > nav, 
+body > footer,
+article footer{
+    display: none;
+}
