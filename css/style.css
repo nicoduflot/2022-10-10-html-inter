@@ -41,6 +41,26 @@ q::before, q::after{
     content: '"';
 }
 
+img{
+    max-width: 100%;
+}
+
+figure{
+    background-color: black;
+}
+
+figure img{
+    display: block;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+figcaption{
+    background-color: white;
+    width: 100%;
+}
+
 aside h3{
     font-family: var(--aside-font-fam);
     letter-spacing: unset;
