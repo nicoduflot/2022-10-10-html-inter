@@ -91,7 +91,10 @@ iframe.video{
     font-weight: 900;
 }
 
-
+audio{
+    margin-left: auto;
+    margin-right: auto;
+}
 
 /*
 @media print {
