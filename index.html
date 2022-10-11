@@ -21,7 +21,7 @@
     </header>
     <nav>
         <ul>
-            <li><a href="./" title="HTML - CSS - introduction" target="_self">Introduction</a></li>
+            <li><a href="./" title="HTML - CSS - introduction" class="active" target="_self">Introduction</a></li>
             <li><a href="./article.html" title="Article" target="_self">Article</a></li>
             <li><a href="./formulaire.html" title="Formulaire" target="_self">Formulaire</a></li>
             <li><a href="./grid.html" title="CSS Grid" target="_self">CSS Grid</a></li>
@@ -155,12 +155,14 @@ ducimus? Voluptas?
                 </footer>
             </article>
             <aside>
-                <h3>En complément</h3>
-                <ul>
-                    <li><a href="https://www.creativebloq.com/"
-                            title="Creative bloq, site de ressources et informations web & design">Creative Bloq</a>
-                    </li>
-                </ul>
+                <div class="aside">
+                    <h3>En complément</h3>
+                    <ul>
+                        <li><a href="https://www.creativebloq.com/"
+                                title="Creative bloq, site de ressources et informations web & design">Creative Bloq</a>
+                        </li>
+                    </ul>
+                </div>
             </aside>
         </section>
         <section>
@@ -309,29 +311,31 @@ body > main > section > article:last-child:nth-of-type(3n+2){<br />
     </main>
     <footer>
         <section>
-            <h3>Site map</h3>
-            <nav>
-                <ul>
-                    <li><a href="./" title="HTML - CSS - introduction" target="_self">Introduction</a></li>
-                    <li><a href="./article.html" title="Article" target="_self">Article</a></li>
-                    <li><a href="./formulaire.html" title="Formulaire" target="_self">Formulaire</a></li>
-                    <li><a href="./grid.html" title="CSS Grid" target="_self">CSS Grid</a></li>
-                    <li><a href="./css.html" title="Trucs CSS" target="_self">Trucs CSS</a></li>
-                    <li><a href="./bootstrap.html" title="Bootstrap" target="_self">Bootstrap</a></li>
-                </ul>
-            </nav>
-        </section>
-        <section>
-            <h3>Liens institutionnels</h3>
-            <nav>
-                <ul>
-                    <li><a href="#">CGU</a></li>
-                    <li><a href="#">Qui sommes-nous ?</a></li>
-                    <li><a href="#">Le blog</a></li>
-                    <li><a href="#">Nos partenaires</a></li>
-                    <li><a href="#">Informations sur les cookies</a></li>
-                </ul>
-            </nav>
+            <section>
+                <h3>Site map</h3>
+                <nav>
+                    <ul>
+                        <li><a href="./" title="HTML - CSS - introduction" target="_self">Introduction</a></li>
+                        <li><a href="./article.html" title="Article" target="_self">Article</a></li>
+                        <li><a href="./formulaire.html" title="Formulaire" target="_self">Formulaire</a></li>
+                        <li><a href="./grid.html" title="CSS Grid" target="_self">CSS Grid</a></li>
+                        <li><a href="./css.html" title="Trucs CSS" target="_self">Trucs CSS</a></li>
+                        <li><a href="./bootstrap.html" title="Bootstrap" target="_self">Bootstrap</a></li>
+                    </ul>
+                </nav>
+            </section>
+            <section>
+                <h3>Liens institutionnels</h3>
+                <nav>
+                    <ul>
+                        <li><a href="#">CGU</a></li>
+                        <li><a href="#">Qui sommes-nous ?</a></li>
+                        <li><a href="#">Le blog</a></li>
+                        <li><a href="#">Nos partenaires</a></li>
+                        <li><a href="#">Informations sur les cookies</a></li>
+                    </ul>
+                </nav>
+            </section>
         </section>
     </footer>
 </body>

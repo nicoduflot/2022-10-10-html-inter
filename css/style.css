@@ -44,6 +44,9 @@ body > footer > section > nav > ul
     --main-links-hover: #625D73;
     --h1-title: #ffc107;
     --h1-shadow: #0D0D0D;
+    --aside-border-color: #ffc107;
+    --aside-border-width: 3px;
+    --aside-border-radius: 5px;
 }
 
 *, 
@@ -56,6 +59,7 @@ h1, h2, h3, h4, h5, h6{
     font-family: 'Overseer';
     letter-spacing: 2px;
     margin: 0;
+    text-align: center;
 }
 
 h1{
@@ -211,13 +215,15 @@ body > nav > ul a:visited{
 }
 
 body > nav > ul a:hover,
-body > nav > ul a:focus{
+body > nav > ul a:focus, 
+Body > nav > ul a.active{
     color: var(--bg-nav-principale);
     background-color: var(--lien-nav-principale);
 }
 
 body > main,
-body > nav > ul{
+body > nav > ul,
+body > footer > section{
     width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -240,6 +246,12 @@ body > main > section aside{
     padding: 2px;
 }
 
+div.aside{
+    border-radius: var(--aside-border-radius);
+    border: var(--aside-border-width) solid var(--aside-border-color);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+}
+
 body > main > section article footer{
     height: 45px;
     display: flex;
@@ -249,14 +261,26 @@ body > main > section article footer{
 
 @media (min-width: 576px){
     body > main,
-    body > nav > ul{
+    body > nav > ul,
+    body > footer > section{
         width: 540px;
     }
+
+    body > footer > section{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    body > footer > section > section{
+        width: var(--article-md-width);
+    }
+
 }
 
 @media (min-width: 768px){
     body > main,
-    body > nav > ul{
+    body > nav > ul,
+    body > footer > section{
         width: 720px;
     }
 
@@ -268,6 +292,11 @@ body > main > section article footer{
     body > main > section article,
     body > main > section aside{
         width: var(--article-md-width);
+    }
+
+    body > main > section article:nth-child(2n+1):last-child,
+    body > main > section aside:nth-child(2n+1):last-child{
+        width: var(--article-xs-width);
     }
 
     body > nav ul{
@@ -287,12 +316,23 @@ body > main > section article footer{
 
 @media (min-width: 992px){
     body > main,
-    body > nav > ul{
+    body > nav > ul,
+    body > footer > section{
         width: 960px;
     }
 
     body > main > section article,
     body > main > section aside{
+        width: var(--article-lg-width);
+    }
+
+    body > main > section article:nth-child(3n+1):last-child,
+    body > main > section aside:nth-child(3n+1):last-child{
+        width: var(--article-xs-width);
+    }
+
+    body > main > section article:nth-child(3n+2):last-child,
+    body > main > section aside:nth-child(3n+2):last-child{
         width: var(--article-lg-width);
     }
 
@@ -303,14 +343,16 @@ body > main > section article footer{
 
 @media (min-width: 1200px){
     body > main,
-    body > nav > ul{
+    body > nav > ul,
+    body > footer > section{
         width: 1140px;
     }
 }
 
 @media (min-width: 1400px){
     body > main,
-    body > nav > ul{
+    body > nav > ul,
+    body > footer > section{
         width: 1320px;
     }
 
