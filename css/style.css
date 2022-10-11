@@ -61,9 +61,29 @@ figcaption{
     width: 100%;
 }
 
+video{
+    max-width: 100%;
+}
+
 aside h3{
     font-family: var(--aside-font-fam);
     letter-spacing: unset;
+}
+
+figure.video{
+    position:relative;
+    padding-bottom:56.25%;
+    height:0;
+    overflow:hidden;
+}
+
+iframe.video{
+    width:100%;
+    height:100%;
+    position:absolute;
+    left:0px;
+    top:0px;
+    overflow:hidden;
 }
 
 .rouge-gras{
