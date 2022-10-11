@@ -24,6 +24,22 @@ body > footer > section > nav > ul
     font-size: 1.1rem;
     --couleur-texte-generale: rgb(0, 0, 0);
     color: var(--couleur-texte-generale);
+    --bg-nav-principale: #625D73;
+    --lien-nav-principale: #F2F2F2;
+    --article-gutter: 10px;
+    --article-xs-width: calc( 100% - calc( var(--article-gutter) * 2 ) );
+    --article-md-width: calc( 50% - calc( var(--article-gutter) * 2 ) );
+    --article-lg-width: calc( 33% - calc( var(--article-gutter) * 2 ) );
+    --article-xl-width: calc( 33% - calc( var(--article-gutter) * 2 ) );
+    --article-xxl-width: calc( 25% - calc( var(--article-gutter) * 2 ) );
+    --button-primary-background:#F2F2F2;
+    --button-primary-color:#BF3636;
+    --button-validation-bg: #F2F2F2;
+    --button-validation-color: #198754;
+    --button-warning-bg: #F2F2F2;
+    --button-warning-color: #ffc107;
+    --button-danger-bg: #F2F2F2;
+    --button-danger-color: #dc3545;
 }
 
 *, 
@@ -35,6 +51,7 @@ body > footer > section > nav > ul
 h1, h2, h3, h4, h5, h6{
     font-family: 'Overseer';
     letter-spacing: 2px;
+    margin: 0;
 }
 
 q::before, q::after{
@@ -96,6 +113,88 @@ audio{
     margin-right: auto;
 }
 
+button{
+    border: 1px solid var(--button-primary-color);
+    background-color: var(--button-primary-background);
+    color: var(--button-primary-color);
+    text-transform: uppercase;
+    padding: 5px 25px;
+    border-radius: 3px;
+}
+
+button:hover{
+    background-color: var(--button-primary-color);
+    color: var(--button-primary-background);
+}
+
+button.valider{
+    background-color: var(--button-validation-bg);
+    color: var(--button-validation-color);
+    border-color: var(--button-validation-color);
+}
+
+button.valider:hover{
+    background-color: var(--button-validation-color);
+    color: var(--button-validation-bg);
+    border-color: var(--button-validation-color);
+}
+
+button.warning{
+    background-color: var(--button-validation-bg);
+    color: black;
+    border-color: var(--button-warning-color);
+}
+
+button.warning:hover{
+    background-color: var(--button-warning-color);
+}
+
+
+
+/* CSS de l'archi HTML */
+
+body{
+    margin: 0;
+}
+
+body > nav{
+    background-color: var(--bg-nav-principale);
+}
+
+
+body > nav > ul{
+    list-style-type: none;
+    padding: 0;
+    line-height: 2rem;
+}
+
+body > nav > ul a,
+body > nav > ul a:visited{
+    color: var(--lien-nav-principale);
+    display: block;
+    text-decoration: none;
+    padding: 0 15px;
+    text-transform: uppercase;
+}
+
+body > nav > ul a:hover,
+body > nav > ul a:focus{
+    color: var(--bg-nav-principale);
+    background-color: var(--lien-nav-principale);
+}
+
+body > main{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body > main > section article,
+body > main > section aside{
+    margin: 5px var(--article-gutter);
+    width: var(--article-xs-width);
+    padding: 2px;
+}
 /*
 @media print {
     :root{
