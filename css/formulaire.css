@@ -1,0 +1,12 @@
+h1{
+    color: var(--h1-title);
+    letter-spacing: 4px;
+    text-shadow: unset;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--couleur-texte-generale);
+}
+
+body > header{
+    height: 6rem;
+}
