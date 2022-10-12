@@ -6,3 +6,54 @@ respecter les couleurs définie dans style.css
 au moins deux listes assez longues pour jouer sur les affichages en colonne css
 
 */
+
+.left{
+    float: left;
+}
+
+.right{
+    float: right;
+}
+
+.flag{
+    height: 0.8rem;
+    display:inline;
+    vertical-align: middle;
+    box-shadow: 0 0 1px black;
+}
+
+.clear{
+    clear: both;
+}
+
+h1{
+    color: var(--h1-title);
+    letter-spacing: 4px;
+    text-shadow: unset;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--couleur-texte-generale);
+}
+
+body > header{
+    height: 6rem;
+}
+
+table{
+    border-collapse: collapse;
+    font-size: 0.8rem;
+}
+
+th, td{
+    border: 1px solid var(--table-cell-border-color);
+    padding: 3px;
+    line-height: 1.2rem;
+}
+
+th{
+    width: 25%;
+}
+
+aside figure{
+    background-color: transparent;
+}

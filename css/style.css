@@ -49,6 +49,7 @@ body > footer > section > nav > ul
     --button-danger-color: #BF3636;
     --main-links: #BF3636;
     --main-links-hover: #625D73;
+    --table-cell-border-color: #BF3636;
     --h1-title: #ffc107;
     --h1-shadow: #0D0D0D;
     --aside-border-color: #ffc107;
@@ -62,17 +63,18 @@ body > footer > section > nav > ul
     box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, h6{
+h1, .h1, h2, h3, h4, h5, h6{
     font-family: 'Overseer';
     letter-spacing: 2px;
     margin: 0;
     text-align: center;
 }
 
-h1{
+h1, .h1{
     color: var(--h1-title);
     letter-spacing: 4px;
     text-shadow: 0 0 5px var(--h1-shadow);
+    font-size: 2rem;
 }
 
 q::before, q::after{
@@ -317,7 +319,7 @@ body > main > section article footer{
         height: calc( 50vh - 4rem );
     }
 
-    h1{
+    h1, .h1{
         font-size: 4rem;
     }
 }
