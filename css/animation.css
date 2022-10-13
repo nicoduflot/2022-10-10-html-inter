@@ -1,0 +1,60 @@
+.translation{
+    transition: transform 0.5s;
+}
+
+.translation:hover{
+    transform: translate(30px, -50px);
+}
+
+.scale{
+    transition: background-color 0.2s ease, box-shadow 0.2s ease-out 0.5s;
+    /* dans la transition
+    un changement d'échelle qui va durer 0.2 secondes 
+    un changement de la couleur de fond qui commence en même temps que le scale, pour la même durée en type de transition ease
+    */
+}
+
+.scale:hover{
+    transform: scale(1.2);
+    background-color: var(--lien-nav-principale);
+    box-shadow: 2px 2px 0 black;
+}
+
+.rectangle{
+    width: 200px;
+    height: 100px;
+    background-color: darkred;
+    opacity: 0.5;
+}
+
+.animation{
+    position: absolute;
+    animation: rectangleQuiBouge 3s infinite;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+
+@keyframes rectangleQuiBouge{
+    0%{
+        transform: rotate(0deg);
+        left: 20vw;
+    }
+    5%{
+        transform: rotate(45deg);
+        left: 20vw;
+    }
+    20%{
+        transform: rotate(45deg);
+        left: 20vw;
+    }
+    50%{
+        left: 70vw;
+        transform: rotate(-90deg);
+    }
+    60%{
+        left: 70vw;
+        transform: rotate(0deg);
+    }
+    100%{
+        left: 20vw;
+    }
+}
