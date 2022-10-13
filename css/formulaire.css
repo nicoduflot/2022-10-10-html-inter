@@ -1,3 +1,23 @@
+.form-info{
+    width: 100%;
+    font-size: 0.95rem;
+    /*visibility: hidden;*/
+}
+
+.form-info::before{
+    font-family: var(--fa-style-family, "Font Awesome 6 Free");
+    font-weight: var(--fa-style, 900);
+    content: "\f05a";
+    font-size: 1rem;
+    /*visibility: visible;*/
+}
+/*
+.form-info:hover,
+.form-info:focus{
+    visibility: visible;
+}
+*/
+
 h1{
     color: var(--h1-title);
     letter-spacing: 4px;
@@ -9,4 +29,67 @@ h1{
 
 body > header{
     height: 6rem;
+}
+
+form p{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+form fieldset{
+    margin-inline-start: unset;
+    margin-inline-end: unset;
+}
+
+form > fieldset label{
+    width: 100%;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+textarea{
+    width: 100%;
+    line-height: 2rem;
+    padding-left: 0.5rem;
+    border-radius: 0.5rem;
+}
+select, option{
+    width: 100%;
+    border-radius: 0.5rem;
+    min-height: unset;
+    height: 35.2px;
+    font-size: 1.1rem;
+    padding-left: 0.2rem 0 0.2rem 0.5rem ;
+}
+
+/* 576px pour form à 500px marge auto g et d*/
+
+@media (min-width: 576px){
+    form{
+        width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    form > fieldset label{
+        width: 25%;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="url"]{
+        width: 60%;
+    }
+
+    input[type="date"]{
+        width: unset;
+        margin-right: 25%;
+    }
+
+    .width100{
+        width: 100%;
+    }
+
 }

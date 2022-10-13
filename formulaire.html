@@ -8,6 +8,7 @@
     <!--
         Commentaire en HTML
     -->
+    <link rel="stylesheet" href="./css/all.css" media="screen" />
     <link rel="stylesheet" href="./css/style.css" media="screen" />
     <link rel="stylesheet" href="./css/formulaire.css" media="screen" />
     <link rel="stylesheet" href="./css/print.css" media="print" />
@@ -95,7 +96,7 @@
                                 <input type="text" name="nom" id="nom"
                                  placeholder="Entrez votre nom" aria-describedby="info-nom" 
                                  required 
-                                 autofocus
+                                 autofocus 
                                  />
                                 <div class="form-info " id="info-nom">
                                     Dans ce champs, entrez votre nom, cette information est obligatoire.
@@ -134,7 +135,7 @@
                                 Votre demande d'échantillon
                             </legend>
                             <p>
-                                <label for="besoin">Description de votre besoin</label>
+                                <label for="besoin" class="width100">Description de votre besoin</label>
                                 <textarea name="besoin" id="besoin" 
                                     placeholder="Entrez la description de votre besoin" 
                                     aria-describedby="info-besoin"></textarea>
@@ -182,7 +183,7 @@
                                 </div>
                             </p>
                             <p>
-                                <label>Les moyens pour vous contacter</label>
+                                <label class="width100">Les moyens pour vous contacter</label>
                                 <input type="checkbox" 
                                     name="contact-mail" 
                                     id="contact-mail" 
@@ -200,7 +201,7 @@
                                 </div>
                             </p>
                             <p>
-                                <label>La demande est pour :</label>
+                                <label class="width100">La demande est pour :</label>
                                 <input type="radio" 
                                     name="type-personne" 
                                     id="personne-physique" 
