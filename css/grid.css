@@ -1,0 +1,86 @@
+/* 
+déclaration de l'élément qui contiendra la grille css
+*/
+.grid-wrapper{
+    display: grid; /* c'est une grille */
+    grid-template-columns: 100%; /* ici chaque colonne fera 100% de la largeur disponible => smartphone */
+    padding: 1rem; /* la marge intérieur de la grille */
+    grid-auto-rows: minmax(150px, auto); /* on définit les hauteur par défaut des ligne de la grille; ici min 150px de hauteur et la max est basée sur la hauteur du contenu de la cellule */
+    gap: 0.9rem; /* espace entre les cellule, mais pas entre les cellule et l'élément grille parent */
+}
+
+.grid-div{
+    border: 3px solid var(--bg-nav-principale);
+    background-color: rgba(0, 0, 0, 0.50);
+}
+
+.six{
+    background-color: var(--button-primary-background);
+    display: none;
+}
+
+body > header{
+    height: 6rem;
+}
+
+@media (min-width: 576px){
+    .grid-wrapper{
+        /* on redéfini la partition des lignes, ici, on répète 3 colonne par ligne */
+        grid-template-columns: repeat( 3, calc( calc( 100% - 1.8rem ) / 3 )  );
+        /* on calcul la largeur de chaque colonne, ici 100% de l'espace disponible - la largeur de 2 gap => avec trois éléments par ligne, il y a deux gap */
+    }
+}
+
+@media (min-width: 768px){
+    .un{
+        /* ici, la cellule class un commence au début de la grille jusqu'au 3ème espace => 2 colonnes */
+        grid-column: 1 / 3;
+        /* elle reste placée sur la 1ère ligne */
+        grid-row: 1;
+    }
+
+    .deux{
+        /* ici, la cellule class un commence au 2ème espace de la grille jusqu'au 4ème espace => 2 colonnes */
+        grid-column: 2 / 4;
+        /* elle commence du deuxième espace en hauteur et fini en 4ème espace en hauteur */
+        grid-row: 2 / 4;
+    }
+
+    .quatre{
+        grid-row: 2 / 4;
+    }
+
+    .cinq{
+        grid-column: 1 / 4;
+    }
+
+    .six{
+        display: block;
+    }
+}
+
+@media (min-width: 1200px){
+    .grid-wrapper{
+        /* on redéfini la partition des lignes, ici, on répète 4 colonne par ligne */
+        grid-template-columns: repeat( 4, calc( calc( 100% - 2.7rem ) / 4 )  );
+        grid-auto-rows: minmax(200px, auto);
+    }
+
+    .deux{
+        grid-column: 1 / 3;
+        grid-row: 2 / 4;
+    }
+
+    .quatre{
+        grid-row: 1 / 3;
+    }
+
+    .cinq{
+        grid-column: 1 / 5;
+    }
+
+    .six{
+        grid-row: 3 / 4;
+    }
+
+}
