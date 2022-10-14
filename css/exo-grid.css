@@ -48,7 +48,7 @@ CSS exo grid
     }
 
     .grid-wrapper-header{
-        grid-template-columns: repeat( 2, calc( calc( 100% - 1.8rem ) / 2 )  );
+        grid-template-columns: repeat( 2, calc( calc( 100% - 0.9rem ) / 2 )  );
     }
 }
 
@@ -72,11 +72,11 @@ CSS exo grid
 
     .huit{
         grid-column: 2 / 4;
-        grid-row: 5 / 7
+        grid-row: 5 / 6
     }
 
     .neuf{
-        grid-row: 6 / 9;
+        grid-row: 6 / 8;
     }
 
     .dix_huit{

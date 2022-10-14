@@ -1,0 +1,8 @@
+.text-bg-custom{
+    color: #fff;
+    background-color: #625D73;
+}
+
+body > main.container{
+    margin-top: 120px;
+}

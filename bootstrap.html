@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Une page en bootstrap 5.2.2</title>
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/bootstrap.css" media="all" />
+    <script src="./js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="./css/bts.css" />
+</head>
+
+<body>
+    <div class="fixed-top">
+        <header class="text-bg-custom text-center">
+            <h1 class="m-0">Formation HTML5 - CSS3</h1>
+        </header>
+        <nav class="navbar navbar-dark navbar-expand-lg text-bg-custom">
+            <div class="container">
+                <!-- <a class="navbar-brand" href="#">Navbar</a>-->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="./" title="HTML - CSS - introduction" class="active" target="_self">Introduction</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./article.html" title="Article" target="_self">Article</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./formulaire.html" title="Formulaire" target="_self">Formulaire</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./grid.html" title="CSS Grid" target="_self">CSS Grid</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./exo-grid.html" title="Exercice sur les grilles CSS" target="_self">Exo grid</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./css.html" title="Trucs CSS" target="_self">Trucs CSS</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="./bootstrap.html" title="Bootstrap" target="_self">Bootstrap</a></li>
+                        <!--
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Link</a>
+                            </li>-->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Exercice(s)
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="./exo-bts.html">Cv Bootstrap</a></li>
+                            </ul>
+                        </li>
+                        <!--
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Disabled</a>
+                        </li>-->
+                    </ul>
+                    <!--
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" name="search-terms" placeholder="Search"
+                            aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                    -->
+                </div>
+            </div>
+        </nav>
+    </div>
+    <main class="container">
+        <section class="row">
+            <article class="col-sm-6 col-lg-4">
+                <header>
+                    <h2>Problèmes courants en CSS</h2>
+                </header>
+                <main>
+                    <p>
+                        Le calcul par défaut des tailles en CSS est content-box,
+                        il est conseillé de le passer en border-box
+                    </p>
+                    <p>
+                        Les tailles calculées : si vous voulez utiliser
+                        des cadratin (em), il est
+                        plus sûr d'utiliser les cadratins racine (rem)
+                        car il sont toujouts calculés
+                        par rapport au cadratin racine du user stylesheet
+                        et non pas le cadratin calculé du conteneur
+                    </p>
+                    <h3>Les polices de caractère</h3>
+                    <p>
+                        On utilisera les propriétés @font-face pour déclarer en CSS une police
+                        de caractère dont les fichiers (eot, svg, ttf, woff, woff2) sont
+                        hébergés sur le site pour ne pas forcer l'utilsateur à télécharger et installer
+                        des fichiers.
+                    </p>
+                </main>
+                <footer>
+                    <a href="./article.html">
+                        <button>
+                            Lire plus
+                        </button>
+                    </a>
+                </footer>
+            </article>
+            <article class="col-sm-6 col-lg-4">
+                <header>
+                    <h2>HTML - CSS sur du texte</h2>
+                </header>
+                <main>
+                    <p>
+                        Il existe quelques balises pour changer l'apparence du texte.
+                        En <b>gras</b> (b ou bold) qui n'a pas d'incidence en SEO ou en <strong>gras</strong> (strong)
+                        qui a un impact direct sur le SEO.
+                    </p>
+                    <p>
+                        Il en est de même pour l'italique : <i>Italique à l'affichage</i>,
+                        <em>Italique afficher avec une emphase sémantique</em>
+                    </p>
+                    <p>
+                        On utilisera les propriétés @font-face pour déclarer en CSS une police
+                        de caractère dont les fichiers (eot, svg, ttf, woff, woff2) sont
+                        hébergés sur le site pour ne pas forcer l'utilsateur à télécharger et installer
+                        des fichiers.
+                    </p>
+                    <p>
+                        La balise font <font color="#f00" size="6" face="Times new roman">texte</font> n'est plus
+                        utilisée.
+                        maintenant on utilise les balises de type inline comme le span <span class="rouge-gras">span
+                            associé à une classe</span>
+                    </p>
+                    <p>
+                        <code>
+                            Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Voluptatum ex asperiores ratione voluptas pariatur fuga quis voluptate aliquid cupiditate repellendus qui, ipsa vitae possimus iure vero impedit laborum unde corporis.
+                        </code>
+                    </p>
+                    <p>
+                        <code>
+                            &lt;p&gt;<br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;coucou<br />
+                            &lt;/p&gt;
+                        </code>
+                    </p>
+                    <p>
+                        H<sub>2</sub>SO<sub>4</sub><sup>2-</sup>
+                    </p>
+                </main>
+                <footer>
+                    <a href="./article.html">
+                        <button>
+                            Lire plus
+                        </button>
+                    </a>
+                </footer>
+            </article>
+            <article class="col-sm-6 col-lg-4">
+                <header>
+                    <h2>D'autres balise de contenu de texte</h2>
+                </header>
+                <main>
+                    <blockquote>
+                        <q>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic odit velit temporibus, ipsum
+                            reiciendis praesentium unde assumenda autem mollitia itaque officiis, facere perferendis
+                            modi et doloribus harum non laudantium adipisci?
+                        </q>
+                        <br />
+                        <cite>Jules César</cite>
+                    </blockquote>
+                    <h3>Différencier les feuilles de style</h3>
+                    <p>
+                        Il est possible d'associer plusieurs feuilles de style à une page html,
+                        et de différencier les "media" (screen, print) qui les utiliseront.
+                    </p>
+                    <p>
+                        Si une page utilise 90% du CSS de base mais nécessite 10% de changement,
+                        comme l'affichage d'un article unique, il est souvent créé un feuillet CSS
+                        qui surchargera les styles uniquement sur ce type de page
+                    </p>
+                </main>
+                <footer>
+                    <a href="./article.html">
+                        <button>
+                            Lire plus
+                        </button>
+                    </a>
+                </footer>
+            </article>
+            <aside class="col-sm-6 col-lg-4">
+                <div>
+                    <h3>En complément</h3>
+                    <ul>
+                        <li><a href="https://www.creativebloq.com/"
+                                title="Creative bloq, site de ressources et informations web & design">Creative Bloq</a>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+            <figure class="col-lg-8 text-center">
+                <img class="img-fluid" src="./images/gundam-take-off-01.gif" />
+            </figure>
+        </section>
+        <section>
+            <article>
+                <header>
+                    <h2>Les pseudo classe</h2>
+                </header>
+                <main>
+                    <p>
+                        il s'agit de complément de sélecteurs css, qui permettent d'intervenir sélectionnant
+                        sur un élément précis en série contenu dans un conteneur, soit les énièmes éléments,
+                        le premier "enfant", le dernier, etc.
+                    </p>
+                    <p>
+                        en chaînant ces pseudo classes, il est possible de prévoir des comportement de
+                        taille des différents éléments selon la largeur d'affichage et le nombre de ses éléments
+                    </p>
+                    <p>
+                        Ici, quand on affche 2 éléments par ligne, si le dernier est égal à un multiple de 2
+                        plus 1, il prend 100% de la largeur<br />
+                        <code><br />
+body > main > section > article:last-child:nth-of-type(2n+1){<br />
+&nbsp;&nbsp;&nbsp;&nbsp;width: 100%;<br />
+}
+</code>
+                    </p>
+                    <p>
+                        Ici, quand on affche 3 éléments par ligne, si le dernier est égal à un multiple de 3
+                        plus 1, il prend 100% de la largeur<br />
+                        <code><br />
+body > main > section > article:last-child:nth-of-type(3n+1){<br />
+&nbsp;&nbsp;&nbsp;&nbsp;width: 100%;<br />
+}<br />
+                        </code>
+                    </p>
+                    <p>
+                        Ici, quand on affche 3 éléments par ligne, si le dernier est égal à un multiple de 3
+                        plus 2, il prend 66% de la largeur<br />
+                        <code><br />
+body > main > section > article:last-child:nth-of-type(3n+2){<br />
+&nbsp;&nbsp;&nbsp;&nbsp;width: 66%;<br />
+}   <br />
+                        </code>
+                    </p>
+                </main>
+                <footer>
+                    <a href="./article.html">
+                        <button>
+                            Lire plus
+                        </button>
+                    </a>
+                </footer>
+            </article>
+        </section>
+        <section>
+            <article>
+                <header>
+                    <h2>Les images</h2>
+                </header>
+                <main class="row">
+                    <figure class="col-lg-6">
+                        <img class="img-fluid" src="./images/poster-twitch-synthwave.jpg"
+                            alt="Poster Twitch Synthwave James White" />
+                        <figcaption>
+                            Poster Twitch Synthwave James White
+                        </figcaption>
+                    </figure>
+                    <img class="img-fluid col-lg-6" src="./images/skeletor-poster-masters-of-the-universe.jpg"
+                        alt="Poster de skeletor les maîtres de l'univers par James White" />
+                </main>
+                <footer>
+                    <a href="./article.html">
+                        <button>
+                            Lire plus
+                        </button>
+                    </a>
+                </footer>
+            </article>
+            <article>
+                <header>
+                    <h2>Les vidéos</h2>
+                </header>
+                <main>
+                    <video class="img-fluid" src="./media/Fallout-4-Launch-Trailer.mp4" controls preload="auto"
+                        muted></video>
+                    <video class="img-fluid" controls>
+                        <source src="./media/Big_Buck_Bunny_360_10s_1MB.webm" type="video/webm" />
+                        <source src="./media/Big_Buck_Bunny_360_10s_1MB.mp4" type="video/mp4" />
+                    </video>
+                    <h3>Vidéos hébergées sur des sites tiers</h3>
+                    <p>
+                        Des sites tels que Youtube et dailymotion donne la possibilité
+                        d'incruster leurs vidéos sur nos sites, en utilisant la balise iframe.
+                    </p>
+                    <p>
+                        L'iframe est une balise qui permet d'appeler une page
+                        d'un autre site (ou du site actuel) dans un cadre délimité.
+                    </p>
+                    <p>
+                        Il faut toutefois que le site ciblé autorise les iframes
+                    </p>
+                    <iframe src="./documents/CRAM.pdf" width="100%" height="200"></iframe>
+                    <iframe src="./documents/texte.txt" width="100%" height="200"></iframe>
+                    <iframe src="./documents/books.xml" width="100%" height="200"></iframe>
+                    <figure class="ratio ratio-16x9">
+                        <iframe frameborder="0" type="text/html" src="https://www.youtube.com/embed/Blw9NoiK28U"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </figure>
+                    <figure class="ratio ratio-16x9">
+                        <iframe frameborder="0" type="text/html" src="https://www.dailymotion.com/embed/video/xr5ef"
+                            allowfullscreen></iframe>
+                    </figure>
+                </main>
+                <footer>
+                    <a href="./article.html">
+                        <button>
+                            Lire plus
+                        </button>
+                    </a>
+                </footer>
+            </article>
+            <article>
+                <header>
+                    <h2>L'audio'</h2>
+                </header>
+                <main>
+                    <p>
+                        Audio hébergé localement
+                    </p>
+                    <figure>
+                        <audio src="./media/diablo_town.mp3" controls type="audio/mp3"></audio>
+                    </figure>
+                    <p>
+                        Audio sur un site tiers
+                    </p>
+                    <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
+                        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/342438726&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+                    <div
+                        style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+                        <a href="https://soundcloud.com/lizzomusic" title="Lizzo" target="_blank"
+                            style="color: #cccccc; text-decoration: none;">Lizzo</a> · <a
+                            href="https://soundcloud.com/lizzomusic/truth-hurts" title="Truth Hurts" target="_blank"
+                            style="color: #cccccc; text-decoration: none;">Truth Hurts</a></div>
+                </main>
+                <footer>
+                    <a href="./article.html">
+                        <button>
+                            Lire plus
+                        </button>
+                    </a>
+                </footer>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <section>
+            <section>
+                <h3>Site map</h3>
+                <nav>
+                    <ul>
+                        <li><a href="./" title="HTML - CSS - introduction" target="_self">Introduction</a></li>
+                        <li><a href="./article.html" title="Article" target="_self">Article</a></li>
+                        <li><a href="./formulaire.html" title="Formulaire" target="_self">Formulaire</a></li>
+                        <li><a href="./grid.html" title="CSS Grid" target="_self">CSS Grid</a></li>
+                        <li><a href="./css.html" title="Trucs CSS" target="_self">Trucs CSS</a></li>
+                        <li><a href="./bootstrap.html" title="Bootstrap" target="_self">Bootstrap</a></li>
+                    </ul>
+                </nav>
+            </section>
+            <section>
+                <h3>Liens institutionnels</h3>
+                <nav>
+                    <ul>
+                        <li><a href="#">CGU</a></li>
+                        <li><a href="#">Qui sommes-nous ?</a></li>
+                        <li><a href="#">Le blog</a></li>
+                        <li><a href="#">Nos partenaires</a></li>
+                        <li><a href="#">Informations sur les cookies</a></li>
+                    </ul>
+                </nav>
+            </section>
+        </section>
+    </footer>
+</body>
+
+</html>
